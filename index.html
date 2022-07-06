@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <script>
+
+        function gacha(){
+            pic2();
+            pic3();
+            pic4();
+        }
+
+        function getn(){
+            return  parseInt(document.querySelector("#n").value);
+        };        
+
+        function getN(){
+            return  parseInt(document.querySelector("#N").value);
+        }; 
+
+        function pic2(){
+            
+            var A2 = 0;
+            var B2 = 0;
+            let Pcomp2 = 0;      
+            let Kcomp2 = 0;                 
+            let Tcomp21 = 0;
+
+            let n = getn();
+            let N = getN();    
+
+            for(let i = 0; i < N; i++){
+                for(let k = 0; k < n; k++){
+
+                    const r2 = Math.random();
+
+                    if ( r2 < 0.010 ){
+                        A2 = A2 + 1;
+                    }
+                    if ( r2 < 0.020 && r2 >= 0.010  ){
+                        B2 = B2 + 1;
+                    }               
+                } 
+                
+                if ( A2 >= 1 && B2 >= 1 ){
+                    Pcomp2 = Pcomp2 + 1;
+                };
+
+                if ( ( A2 >= 1 ) || ( B2 >= 1  ) || ( A2 >= 1 && B2 >= 1 ) ){
+                    Kcomp2 = Kcomp2 + 1;
+                };
+
+                if ( A2 >= 1 ){
+                    Tcomp21 = Tcomp21 + 1;
+                };
+                
+                var A2 = 0;
+                var B2 = 0;
+
+            }
+
+            document.querySelector("#rPcomp2").value = (100*Pcomp2/N).toFixed(2);
+            document.querySelector("#rKcomp2").value = (100*Kcomp2/N).toFixed(2);
+            document.querySelector("#rTcomp21").value = (100*Tcomp21/N).toFixed(2);
+
+        }
+
+
+        function pic3(){
+            
+            var A3 = 0;
+            var B3 = 0;
+            var C3 = 0;
+            let Pcomp3 = 0;      
+            let Kcomp3 = 0;                 
+            let Tcomp31 = 0;
+            let Tcomp32 = 0;
+
+            let n = getn();
+            let N = getN();    
+
+            for(let i = 0; i < N; i++){
+                for(let k = 0; k < n; k++){
+
+                    const r3 = Math.random();
+
+                    if ( r3 < 0.007 ){
+                        A3 = A3 + 1;
+                    }
+                    if ( r3 < 0.014 && r3 >= 0.007  ){
+                        B3 = B3 + 1;
+                    }               
+                    if ( r3 < 0.021 && r3 >= 0.014  ){
+                        C3 = C3 + 1;
+                    }
+                } 
+                
+                if ( A3 >= 1 && B3 >= 1 && C3 >= 1){
+                    Pcomp3 = Pcomp3 + 1;
+                };
+
+                if ( ( A3 >= 1 && B3 >= 1 ) || ( B3 >= 1 && C3 >= 1 ) || ( C3 >= 1 && A3 >= 1 ) || ( A3 >= 1 && B3 >= 1 && C3 >= 1) ){
+                    Kcomp3 = Kcomp3 + 1;
+                };
+
+                if ( A3 >= 1 ){
+                    Tcomp31 = Tcomp31 + 1;
+                };
+                
+                if ( A3 >= 1 && B3 >= 1 ){
+                    Tcomp32 = Tcomp32 + 1;
+                };
+
+                var A3 = 0;
+                var B3 = 0;
+                var C3 = 0;  
+
+            }
+
+            document.querySelector("#rPcomp3").value = (100*Pcomp3/N).toFixed(2);
+            document.querySelector("#rKcomp3").value = (100*Kcomp3/N).toFixed(2);
+            document.querySelector("#rTcomp31").value = (100*Tcomp31/N).toFixed(2);
+            document.querySelector("#rTcomp32").value = (100*Tcomp32/N).toFixed(2);
+
+        }
+
+        function pic4(){
+            
+            var A4 = 0;
+            var B4 = 0;
+            var C4 = 0;
+            var D4 = 0;
+            let Pcomp4 = 0;      
+            let Kcomp4 = 0;                 
+            let Tcomp41 = 0;
+            let Tcomp42 = 0;
+            let Tcomp43 = 0;
+
+            let n = getn();
+            let N = getN();    
+
+            for(let i = 0; i < N; i++){
+                for(let k = 0; k < n; k++){
+
+                    const r4 = Math.random();
+
+                    if ( r4 < 0.005 ){
+                        A4 = A4 + 1;
+                    }
+                    if ( r4 < 0.01 && r4 >= 0.005  ){
+                        B4 = B4 + 1;
+                    }               
+                    if ( r4 < 0.015 && r4 >= 0.01  ){
+                        C4 = C4 + 1;
+                    }
+                    if ( r4 < 0.02 && r4 >= 0.015  ){
+                        D4 = D4 + 1;
+                    }                    
+                } 
+                
+                if ( A4 >= 1 && B4 >= 1 && C4 >= 1 && D4 >= 1){
+                    Pcomp4 = Pcomp4 + 1;
+                };
+
+                if ( ( A4 >= 1 && B4 >= 1 && C4 >= 1 ) || ( B4 >= 1 && C4 >= 1 && D4 >= 1) || ( C4 >= 1 && D4 >= 1 && A4 >= 1 ) || ( D4 >= 1 && A4 >= 1 && B4 >= 1) || ( A4 >= 1 && B4 >= 1 && C4 >= 1 && D4 >= 1) ){
+                    Kcomp4 = Kcomp4 + 1;
+                };
+
+                if ( A4 >= 1 ){
+                    Tcomp41 = Tcomp41 + 1;
+                };
+                
+                if ( A4 >= 1 && B4 >= 1 ){
+                    Tcomp42 = Tcomp42 + 1;
+                };
+
+                if ( A4 >= 1 && B4 >= 1 && C4 >= 1){
+                    Tcomp43 = Tcomp43 + 1;
+                };
+
+                var A4 = 0;
+                var B4 = 0;
+                var C4 = 0;  
+                var D4 = 0;
+
+            }
+
+            document.querySelector("#rPcomp4").value = (100*Pcomp4/N).toFixed(2);
+            document.querySelector("#rKcomp4").value = (100*Kcomp4/N).toFixed(2);
+            document.querySelector("#rTcomp41").value = (100*Tcomp41/N).toFixed(2);
+            document.querySelector("#rTcomp42").value = (100*Tcomp42/N).toFixed(2);
+            document.querySelector("#rTcomp43").value = (100*Tcomp43/N).toFixed(2);
+        }
+
+ 
+    </script>
+
+<head>
+    <title>ワーフリガチャシミュレーション</title>
+<body>
+    <h1>ワーフリガチャシミュレーション</h1>
+    <h2></h2>   
+    <a>何回引きますか?</a> <input type="text" id="n"/><br>
+    <a>何回コンプするかの試行をしますか?</a> <input type="text" id="N"/><br>
+    <div class="btn">
+    <input type="submit" onclick="gacha()" value="回す">
+    </div>    
+    <br> 
+    <h3>2PU</h3>
+    <a>2PUを何回引きますか?</a> <input type="text" id="n"/><br>
+    <a>2PUを何回コンプするかの試行をしますか?</a> <input type="text" id="N"/><br>
+    <div class="btn">
+    <input type="submit" onclick="pic2()" value="回す">
+    </div>    
+    <br>
+    <br>    
+    <a>2PUでの完全コンプの確率は</a> <input type="text" id="rPcomp2"/><a>％です</a><br>
+    <a>2PUでの交換前提コンプの確率は</a> <input type="text" id="rKcomp2"/><a>％です</a><br>
+    <a>2PUでの特定の1キャラを引く確率は</a> <input type="text" id="rTcomp21"/><a>％です</a><br>
+    <br>
+    <br>
+    <br>
+    <h3>3PU</h3>
+    <a>3PUを何回引きますか?</a> <input type="text" id="n"/><br>
+    <a>3PUを何回コンプするかの試行をしますか?</a> <input type="text" id="N"/><br>
+    <div class="btn">
+    <input type="submit" onclick="pic3()" value="回す">
+    </div>    
+    <br>    
+    <br>
+    <a>3PUでの完全コンプの確率は</a> <input type="text" id="rPcomp3"/><a>％です</a><br>
+    <a>3PUでの交換前提コンプの確率は</a> <input type="text" id="rKcomp3"/><a>％です</a><br>
+    <a>3PUでの特定の1キャラを引く確率は</a> <input type="text" id="rTcomp31"/><a>％です</a><br>
+    <a>3PUでの特定の2キャラを引く確率は</a> <input type="text" id="rTcomp32"/><a>％です</a><br>
+    <br>
+    <br>
+    <br>
+    <h3>4PU</h3>
+    <a>4PUを何回引きますか?</a> <input type="text" id="n"/><br>
+    <a>4PUを何回コンプするかの試行をしますか?</a> <input type="text" id="N"/><br>
+    <div class="btn">
+    <input type="submit" onclick="pic4()" value="回す">
+    </div>    
+    <br>    
+    <br>
+    <a>4PUでの完全コンプ確率は</a> <input type="text" id="rPcomp4"/><a>％です</a><br>
+    <a>4PUでの交換前提コンプ確率は</a> <input type="text" id="rKcomp4"/><a>％です</a><br>
+    <a>4PUでの特定の1キャラを引く確率は</a> <input type="text" id="rTcomp41"/><a>％です</a><br>
+    <a>4PUでの特定の2キャラを引く確率は</a> <input type="text" id="rTcomp42"/><a>％です</a><br>
+    <a>4PUでの特定の3キャラを引く確率は</a> <input type="text" id="rTcomp43"/><a>％です</a><br>
+    </html>

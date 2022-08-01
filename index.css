@@ -1,0 +1,120 @@
+main {
+	width: 70%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+body {
+      background-color: #486d46;
+      background-image: url("キービジュアル透過.jpg"); /* 640x426 */
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center;
+	  width: auto;
+	  font-size: 120%;
+	  
+	  
+}
+
+input[type="text"] { 
+	
+	height: 48px;
+	width: auto;
+ }
+ input[type="submit"] { 
+	height: 60px;
+	width: 80px;
+	font-size: 150%;
+ }
+ 
+aside {
+	width: calc(30% - 26px);
+	display: inline-block;
+	margin-left: 20px;
+	box-sizing: border-box;
+	border: solid 1px;
+}
+ 
+p {
+	line-height: 2;
+	width: 60%;
+	display: inline-block;
+	padding-right: 10px;
+	box-sizing: border-box;
+	vertical-align: top;
+	margin: 0;
+}
+
+
+
+.clicktxt {
+color:#ffffff;
+background-color: #4169e1;
+padding:15px;
+border-radius: 10px;
+}
+
+.switchdsp input {
+display: none;
+}
+
+.switchdsp .dsp {
+padding: 0px 10px 0px 10px;
+height: 0;
+overflow: hidden;
+transition: 0.9s;
+opacity: 0;
+}
+
+.switchdsp input:checked ~ .dsp {
+padding: 0px 25px 0px 25px;
+height: auto;
+opacity: 1;
+}
+
+
+
+@media screen and (max-width:480px) {
+
+	* {
+		float: none;
+		position: static;
+	}
+	 
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+
+	body {
+		background-color: #486d46;
+		background-image: url("キービジュアル透過.jpg"); /* 640x426 */
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+		font-size: 90%;
+		
+
+  }
+
+  input[type="text"] { 
+	
+	height: 35px;
+	width: auto;
+ }
+ input[type="submit"] { 
+	height: 35px;
+	width: 50x;
+	font-size: 80%;
+ }
+
+ h1{
+	font-size: 100%;
+ }
+ 
+ h2{
+	font-size: 100%;
+ }
+
+}
